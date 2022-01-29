@@ -1,0 +1,28 @@
+MDBoxLayout:
+    orientation: 'vertical'
+
+
+    MDScreen:
+
+        MDLabel:
+            id:m_label
+            text: 'Some Stuff'
+            halign:"center"
+
+        MDFloatingActionButtonSpeedDial:
+            data:app.data
+            root_button_anim:True    
+            #color stuff
+            # label_text_color:1,0,0,1
+            # bg_color_stack_button:1,0,0,1 # bg of icon
+            # bg_color_root_button:1,0,0,1 # speed dial bg
+            # color_icon_root_button:1,0,0,1 # speed dial text color
+            # color_icon_stack_button:1,0,0,1 # icon text color
+            # bg_hint_color:1,0,0,1 #icon bg color
+
+            # pusing the callback
+            callback:app.callback_it
+
+            # open and close
+            on_open:app.open()
+            on_close:app.close()
